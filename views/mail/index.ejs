@@ -1,0 +1,29 @@
+<div class="my-3">
+    <form action="./lists" method="get" style="display: flex;">
+        <button class="btn btn-primary" style="margin-left: auto;">Danh sách mail đã gửi</button>
+    </form>
+</div>
+<div class="mt-3">
+    <h1 class="text-center">Gửi Email</h1>
+    <form action="./send" method="post">
+        <div class="mb-3">
+            <span>Người nhận</span>
+            <input type="email" placeholder="Người nhận Email..." class="form-control" name="email" value="<%= req?.data?.email %>">
+            <span class="text-danger"><%= req?.error?.email ? req?.error?.email : '' %></span>
+        </div>
+        <div class="mb-3">
+            <span>Tiêu đề</span>
+            <input type="text" placeholder="Nhập tiêu đề..." class="form-control" name="title" value="<%= req?.data?.title %>">
+            <span class="text-danger"><%= req?.error?.title ? req?.error?.title : '' %></span>
+        </div>
+        <div class="mb-3 ">
+            <span>Nội dung</span>
+            <textarea name="content" placeholder="Nhập nội dung" class="form-control" rows="8" aria-valuetext="<%= req?.data?.content %>"></textarea>
+            <span class="text-danger"><%= req?.error?.content ? req?.error?.content : '' %></span>
+        </div>
+        <div class="d-grid">
+            <button class="btn btn-primary">Gửi</button>
+        </div>
+    </form>
+    
+</div>

@@ -1,0 +1,24 @@
+<h1 class="text-center">Lịch sử gửi mail</h1>
+<table class="table table-bordered mt-3">
+    <tr>
+        <th width="5%">STT</th>
+        <th>Email</th>
+        <th>Tiêu đề</th>
+        <th>Trạng Thái</th>
+        <th>Thời gian</th>
+        <th width="5%">Nội Dung</th>
+    </tr>
+    <% email.forEach(({email, title, status, createdAt, content}, index) => { %> 
+    <tr>
+        <td><%= index+1 %></td>
+        <td><%= email %></td>
+        <td><%= title %></td>
+        <td><%= status ? 'Đã xem' : 'Chưa xem' %></td>
+        <td><%= moment(createdAt).format('DD/MM/YY HH:mm:ss') %></td>
+        <td>
+            <button class="btn btn-success"  onclick="alert(`${content}`)">Xem</button>
+        </td>
+
+    </tr>
+    <%}) %>
+</table>
