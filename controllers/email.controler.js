@@ -8,7 +8,6 @@ const Email = models.Email;
 
 module.exports = {
     index: (req, res)=>{
-        console.log(req.error);
        res.render("mail/index", {req})
     },
     getLists:async (req, res)=>{
