@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "postinstall": "npx sequelize-cli db:migrate",
-	  "build": "npm run postinstall && npm run vercel-build"
+    "build": "npm run postinstall && npm run vercel-build"
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
